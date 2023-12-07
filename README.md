@@ -1,4 +1,4 @@
-# Hacking-Game
+# Microsoft Sentiel
 
 ## Goal
 
@@ -8,24 +8,34 @@ Are you ready?
 
 ## Environment 
 
-There are 3 VMs: Hack-vm (Windows10), Workstation-vm (Windows10) and Dc-vm (Windows Server 2016) 
-
+- Entra ID tenant with 2 users:
+  - trainee: allows you to connect to Azure to deploy resources
+  - j.robert: disabled user, will be used to run tests
+- subscription:
+  - Resource Group "rg-co-hack"
+  - Windows VM "vm-windows"
+  - Vnet "co-hack-vnet"
+- Deploy all resources in the resource group "rg-co-hack",in the same region of the existing resources.
 
 ![archi](./images/archi.png)
 
 ## Hacking Steps
 
-1. Connect to the Hack-vm using RDP. Your coach will provide you with the Public IP address and credentials.
+1. Connect to Azure using "trainee" account. Your coach will provide you the password account.
 
-2. Use a tool from the toolbox to discover the private IP address of the Workstation-vm.
+2. Deploy a log analytics workspace. 
 
-3. Use a tool from the toolbox to find the login and password that will allow you to connect to the Workstation-vm using RDP.
+3. Deploy Microsoft Sentinel using the log analytics workspace created in the step 2.
 
-4. Connect to the Workstation-vm using RDP and the login and password found in step 3.
+4. Using the Content hub in Microsoft Sentinel install the following solutions
+   - Azure Activity
+   - Microsoft Entra ID
+   - Windows Security Event
+5.   
 
-5. Discover the IP address of the domain controller Dc-vm.  
+6. Discover the IP address of the domain controller Dc-vm.  
 
-6. Use a tool from the toolbox, (a) to find the login and password hash of the Domain Admin then (b) to connect to the domain controller using RDP.
+7. Use a tool from the toolbox, (a) to find the login and password hash of the Domain Admin then (b) to connect to the domain controller using RDP.
 
 
   >**Note**: Each tool should be used one time  
