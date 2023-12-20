@@ -43,7 +43,7 @@ Are you ready to embrace this challenge?
 5. Generate Events:
    - Connect to "vm-win11" using RDP, copy and run the provided script "" to clear all event logs.
    
-   - On a browser private windows, sign in with "j.robert" account to:
+   - On a browser private window, sign in with "j.robert" account (the password will be provided by your coach) to access to:
     
       - Azure portal https://portal.azure.com
       
