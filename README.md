@@ -41,7 +41,7 @@ Are you ready to embrace this challenge?
     >**Note**: Use NRT rules whenever is possible and the frequency of the scheduled rules should be reduced to 5 minutes.
 
 5. Generate Events:
-   - Connect to "vm-win11" using RDP, copy and run the provided script "" to clear all event logs.
+   - Connect to "vm-win11" using RDP (the credentials will be provided by your coach), copy and run the provided script "" to clear all event logs.
    
    - On a browser private window, sign in with "j.robert" account (the password will be provided by your coach) to access to:
     
