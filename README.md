@@ -9,7 +9,7 @@ Are you ready?
 ## Environment 
 
 - Entra ID tenant with 2 users:
-  - trainee: allows you to connect to Azure to deploy resources
+  - cohacker: allows you to connect to Azure to deploy resources
   - j.robert: disabled user, will be used to run tests
 - subscription:
   - Resource Group "rg-co-hack"
@@ -23,14 +23,13 @@ Are you ready?
 
 1. Connect to Azure using "trainee" account. Your coach will provide you the password account.
 
-2. Deploy a log analytics workspace. 
+2. Deploy Microsoft Sentinel.
 
-3. Deploy Microsoft Sentinel using the log analytics workspace created in the step 2.
-
-4. Using the Content hub in Microsoft Sentinel install the following solutions
+3. Connect the following Logs/Data Sources 
    - Azure Activity
    - Microsoft Entra ID
-   - Windows Security Event
+   - Windows Security Event for vm-win11
+   - Micrsooft Defender Threat Intelligence 
 5.   
 
 6. Discover the IP address of the domain controller Dc-vm.  
