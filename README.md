@@ -1,56 +1,62 @@
-# Microsoft Sentiel
+# Microsoft Sentiel Unveiled
 
 ## Goal
 
-In this challenge, we invite you to step into the role of a hacker. Your first objective will be to access to a corporate network by infiltrating a user's machine. Once you have gained access to this machine, your ultimate goal will be to gain control over the company's domain.
+You are members of the Contoso SOC (Security Operation Center) team. Contoso aims to modernize its SIEM/SOAR solutions, and the CISO has learned about Microsoft Sentinel. To assess its capabilities, the CISO has assigned you to lead the development of a Proof of Concept (PoC). The objective is to evaluate how Microsoft Sentinel efficiently collects logs and threat indicators, automatically detects incidents, and responds to them.
 
-Are you ready? 
+Are you ready to embrace this challenge?
 
 ## Environment 
 
 - Entra ID tenant with 2 users:
-  - cohacker: allows you to connect to Azure to deploy resources
-  - j.robert: disabled user, will be used to run tests
+  - cohacker: Allows you to connect to Azure to deploy resources
+  - j.robert: Disabled user, will be used to run generate events
 - subscription:
-  - Resource Group "rg-co-hack"
-  - Windows VM "vm-windows"
-  - Vnet "co-hack-vnet"
-- Deploy all resources in the resource group "rg-co-hack",in the same region of the existing resources.
+  - Resource Group "rg-cohack"
+  - Windows VM "vm-win11"
+  - Vnet "co-hackvnet"
+>**Note**: Deploy all resources in the resource group "rg-cohack",in the same region of the existing resources.
 
-![archi](./images/archi.png)
+![archi](./images/Picture1.jpg)
 
 ## Hacking Steps
 
-1. Connect to Azure using "trainee" account. Your coach will provide you the password account.
+1. Connect to Azure using "cohacker" account. Your coach will provide you the password account.
 
-2. Deploy Microsoft Sentinel.
+2. Deploy Microsoft Sentinel with a new log analytics workspace.
 
 3. Connect the following Logs/Data Sources 
-   - Azure Activity
-   - Microsoft Entra ID
+   - Azure Activity logs
+   - Microsoft Entra ID sign-in logs
    - Windows Security Event for vm-win11
    - Micrsooft Defender Threat Intelligence 
-5.   
+   >**Note**: You will need first to install solutions from content hub
 
-6. Discover the IP address of the domain controller Dc-vm.  
+4. Create analytics rule to detect automatically the following incidents:
+   - Creation of expensive computes in Azure,i.e, every Azure VM using more than 16vcpu.
+   - Attempts to sign in to disabled accounts.
+   - Security Event log cleared on Windows VM.
+   - SigninLogs matching IP indicators of compromise
 
-7. Use a tool from the toolbox, (a) to find the login and password hash of the Domain Admin then (b) to connect to the domain controller using RDP.
+    >**Note**: Use NRT rules whenever is possible and the frequency of the scheduled rules should be reduced to 5 minutes.
 
+5. Generate Events:
+   - Connect to "vm-win11" using RDP, copy and run the provided script "" to clear all event logs.
+   
+   - On a browser private windows, sign in with "j.robert" account to:
+    
+      - Azure portal https://portal.azure.com
+      
+      - Outlook https://outlook.office.com
+      - Microsoft 365 https://microsoft365.com
+   
+   - On Azure subcription, create a linux VM with the size.   
 
-  >**Note**: Each tool should be used one time  
+6. On Azure subscription, deploy the Playbook (Logic APP) "...." using the provided bicep template.
 
-## Toolbox
-1. Mimikatz
-    - https://github.com/ParrotSec/mimikatz
-    - https://techyrick.com/mimikatz-tutorial/
-    - https://edermi.github.io/post/2018/native_rdp_pass_the_hash/
+7. Respond to the incident "...." by isolating the "vm-win11" using the deployed Playbook.
 
-2. Nmap 
-    - https://nmap.org/download.html
+8. Confirm that sentinel has received some indicators of compromise.
+  
 
-3. Hydra 
-    - https://github.com/maaaaz/thc-hydra-windows
-    - https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/
-    - https://github.com/adeldjama/Hacking-Game/blob/37fa336979bbdabf53f53ce07d7832900f47b2c4/resources/username.txt
-    - https://github.com/adeldjama/Hacking-Game/blob/37fa336979bbdabf53f53ce07d7832900f47b2c4/resources/password.txt
-
+## Resources
