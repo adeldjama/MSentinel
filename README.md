@@ -34,7 +34,7 @@ Are you ready to embrace this challenge?
    - Microsoft Entra ID sign-in logs
    - Windows Security Event for vm-win11
    - Micrsooft Defender Threat Intelligence 
-   >**Note**: 
+   >**Notes**: 
    >  - You will need first to install solutions from content hub.
    >  - Use the managed identity to apply policies remediation.
 
@@ -44,7 +44,7 @@ Are you ready to embrace this challenge?
    - Security Event log cleared on Windows VM.
    - SigninLogs matching IP indicators of compromise
 
-    >**Note**: 
+    >**Notes**: 
     >  - Use NRT rules whenever is possible.
     >  - The scheduled rules frequency should be reduced to 5 minutes.
     >  - To detect VM using 16vcpu, you will need to modify the detection query.
