@@ -34,9 +34,9 @@ Are you ready to embrace this challenge?
    - Microsoft Entra ID sign-in logs
    - Windows Security Event for vm-win11
    - Micrsooft Defender Threat Intelligence 
-   >**Note**: You will need first to install solutions from content hub
-
-   >**Note**: Use the managed identity to apply policies remediation
+   >**Note**: 
+   >  - You will need first to install solutions from content hub.
+   >  - Use the managed identity to apply policies remediation.
 
 4. Create analytics rule to detect automatically the following incidents:
    - Creation of expensive computes in Azure,i.e, every Azure VM using more than 16vcpu.
@@ -44,11 +44,10 @@ Are you ready to embrace this challenge?
    - Security Event log cleared on Windows VM.
    - SigninLogs matching IP indicators of compromise
 
-    >**Note**: Use NRT rules whenever is possible.
-
-    >**Note**:  The scheduled rules frequency should be reduced to 5 minutes.
-    
-    >**Note**: To detect VM using 16vcpu, you will need to modify the detection query.
+    >**Note**: 
+    >  - Use NRT rules whenever is possible.
+    >  - The scheduled rules frequency should be reduced to 5 minutes.
+    >  - To detect VM using 16vcpu, you will need to modify the detection query.
 
 5. Generate Events:
    - Connect to **vm-win11** using RDP (the credentials will be provided by your coach), copy and run the provided script **Clear_Event_Viewer_Logs.bat** to clear all event logs.
