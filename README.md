@@ -36,13 +36,13 @@ Are you ready to embrace this challenge?
    - Micrsooft Defender Threat Intelligence 
    >**Notes**: 
    >  - You will need first to install solutions from content hub.
-   >  - Use the managed identity to apply policies remediation.
+   >  - Use the managed identity to apply the policy remediation.
 
 4. Create analytics rule to detect automatically the following incidents:
    - Creation of expensive computes in Azure,i.e, every Azure VM using more than 16vcpu.
    - Attempts to sign in to disabled accounts.
    - Security Event log cleared on Windows VM.
-   - SigninLogs matching IP indicators of compromise
+   - SigninLogs matching an IP entity belonging to threat indicators of compromise
 
     >**Notes**: 
     >  - Use NRT rules whenever is possible.
@@ -71,3 +71,10 @@ Are you ready to embrace this challenge?
   
 
 ## Resources
+
+- Quickstart, Onboard Microsoft Sentinel
+: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
+- Tutorial, Detect threats by using analytics rules in Microsoft Sentinel: https://learn.microsoft.com/en-us/azure/sentinel/tutorial-log4j-detection
+- Tutorial, Respond to threats by using playbooks with automation rules: https://learn.microsoft.com/en-us/azure/sentinel/tutorial-respond-threats-playbook?tabs=LAC%2Cincidents
+- 
+
