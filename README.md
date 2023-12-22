@@ -54,10 +54,10 @@ Are you ready to embrace this challenge?
    
    - On a browser private window, sign in with **j.robert** user account (the password will be provided by your coach) to access to:
     
-      - Azure portal **https://portal.azure.com**
+      - Azure portal: **https://portal.azure.com**
       
-      - Outlook **https://outlook.office.com**
-      - Microsoft 365 **https://microsoft365.com**
+      - Outlook: **https://outlook.office.com**
+      - Microsoft 365: **https://microsoft365.com**
    
    - On Azure subcription, create a linux VM **vm-linux** with the size **D16s_v5**.   
 
