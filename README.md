@@ -45,6 +45,7 @@ Are you ready to embrace this challenge?
    - SigninLogs matching an IP entity belonging to threat indicators of compromise
 
     >**Notes**: 
+    >  - Use the rule templates 
     >  - Use NRT rules whenever is possible.
     >  - The scheduled rules frequency should be reduced to 5 minutes.
     >  - To detect VM using 16vcpu, you will need to modify the detection query.
