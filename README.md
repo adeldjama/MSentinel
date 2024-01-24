@@ -2,7 +2,7 @@
 
 ## Goal
 
-You are members of the Contoso SOC (Security Operation Center) team. Contoso aims to modernize its SIEM/SOAR solutions, and the CISO has learned about Microsoft Sentinel. To assess its capabilities, the CISO has assigned you to lead the development of a Proof of Concept (PoC). The objective is to evaluate how Microsoft Sentinel efficiently **collects logs** and **threat indicators**, **automatically detects incidents**, and **responds** to them.
+As part of the Contoso SOC team, your role is crucial in Contoso's efforts to modernize its SIEM/SOAR solutions. The CISO recently discovered Microsoft Sentinel, and to assess its capabilities, you've been tasked with leading the development of a Proof of Concept (PoC). The objective is to evaluate how Microsoft Sentinel efficiently **collects logs** and **threat indicators**, **automatically detects incidents**, and **responds** to them.
 
 Are you ready to embrace this challenge?
 
@@ -47,11 +47,11 @@ Are you ready to embrace this challenge?
     >**Notes**: 
     >  - Use the rule templates 
     >  - Use NRT rules whenever is possible.
-    >  - The scheduled rules frequency should be reduced to 5 minutes.
+    >  - The scheduled rules frequency should be reduced to 5 minutes and lookup data to 1 day.
     >  - To detect VM using 16vcpu, you will need to modify the detection query.
 
 5. Generate Events:
-   - Connect to **vm-win11** using RDP (the credentials will be provided by your coach), copy and run the provided script **Clear_Event_Viewer_Logs.bat** to clear all event logs.
+   - Connect to **vm-win11** using RDP (the credentials will be provided by your coach), copy and run as an administrator the provided script **Clear_Event_Viewer_Logs.bat** to clear all event logs.
    
    - On a browser private window, sign in with **j.robert** user account (the password will be provided by your coach) to access to:
     
@@ -60,15 +60,15 @@ Are you ready to embrace this challenge?
       - Outlook: **https://outlook.office.com**
       - Microsoft 365: **https://microsoft365.com**
    
-   - On Azure subcription, create a linux VM **vm-linux** with the size **D16s_v5**.   
+   - On Azure subcription, create a linux VM **vm-linux** with the size **D16s_v5**. you can stop the VM once it's deployed.
 
 6. On Azure subscription, deploy the Playbook (Logic APP) **IsolateAzureVMtoNSG.json** using the provided bicep template.
 
-   >**Note**: Use the managed identity for API connection
+   >**Note**: Use the managed identity for API connection and HTTP requests in the logic app designer.
 
 7. Respond to the incident **Security Event log cleared** by isolating the **vm-win11** using the deployed Playbook.
 
-8. Confirm that sentinel has received some indicators of compromise.
+8. Confirm that Microsoft sentinel has received some indicators of compromise.
   
 
 ## Resources
@@ -77,5 +77,5 @@ Are you ready to embrace this challenge?
 : https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
 - Tutorial, Detect threats by using analytics rules in Microsoft Sentinel: https://learn.microsoft.com/en-us/azure/sentinel/tutorial-log4j-detection
 - Tutorial, Respond to threats by using playbooks with automation rules: https://learn.microsoft.com/en-us/azure/sentinel/tutorial-respond-threats-playbook?tabs=LAC%2Cincidents
-- 
+
 
