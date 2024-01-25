@@ -35,18 +35,18 @@ Are you ready to embrace this challenge?
    - Windows Security Event for vm-win11
    - Micrsooft Defender Threat Intelligence 
    >**Notes**: 
-   >  - You will need first to install solutions from content hub.
+   >  - You will need to install solutions first from content hub.
    >  - Use the managed identity to apply the policy remediation.
 
-4. Create analytics rule to detect automatically the following incidents:
+4. Create analytics rule to automatically detect the following incidents:
    - Creation of expensive computes in Azure,i.e, every Azure VM using more than 16vcpu.
    - Attempts to sign in to disabled accounts.
    - Security Event log cleared on Windows VM.
-   - SigninLogs matching an IP entity belonging to threat indicators of compromise
+   - SigninLogs matching an IP entity belonging to threat indicators of compromise.
 
     >**Notes**: 
     >  - Use the rule templates 
-    >  - Use NRT rules whenever is possible.
+    >  - Use NRT rules whenever it is possible.
     >  - The scheduled rules frequency should be reduced to 5 minutes and lookup data to 1 day.
     >  - To detect VM using 16vcpu, you will need to modify the detection query.
 
@@ -60,7 +60,7 @@ Are you ready to embrace this challenge?
       - Outlook: **https://outlook.office.com**
       - Microsoft 365: **https://microsoft365.com**
    
-   - On Azure subcription, create a linux VM **vm-linux** with the size **D16s_v5**. you can stop the VM once it's deployed.
+   - On Azure subscription, create a Linux VM **vm-linux** with the size **D16s_v5**. You can stop the VM once it's deployed.
 
 6. On Azure subscription, deploy the Playbook (Logic APP) **IsolateAzureVMtoNSG.json** using the provided bicep template.
 
