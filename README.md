@@ -9,13 +9,13 @@ Are you ready to embrace this challenge?
 ## Environment 
 
 - Entra ID tenant with 2 users:
-  - **cohacker**: user account to connect to Azure to run the Co-Hack
-  - **j.robert**: Disabled user account, will be used to generate events
+  - **cohacker**: user account to connect to Azure to run the Co-Hack.
+  - **j.robert**: Disabled user account, will be used to generate events.
   - **mi-sentinel**: Managed identity, will be used in policies and Logic APP. 
 - subscription:
-  - Resource Group **rg-cohack**
-  - Windows11 VM **vm-win11**
-  - Vnet **vnet-cohack**
+  - Resource Group **rg-cohack**.
+  - Windows11 VM **vm-win11**.
+  - Vnet **vnet-cohack**.
 
 >**Note**: Deploy all resources in the resource group "rg-cohack",in the same region of the existing resources.
 
@@ -29,11 +29,11 @@ Are you ready to embrace this challenge?
 
 2. Deploy Microsoft Sentinel with a new log analytics workspace.
 
-3. Connect the following Logs/Data Sources 
-   - Azure Activity logs
-   - Microsoft Entra ID sign-in logs
-   - Windows Security Event for vm-win11
-   - Micrsooft Defender Threat Intelligence 
+3. Connect the following Logs/Data Sources: 
+   - Azure Activity logs.
+   - Microsoft Entra ID sign-in logs.
+   - Windows Security Event for vm-win11.
+   - Micrsooft Defender Threat Intelligence.
    >**Notes**: 
    >  - You will need to install solutions first from content hub.
    >  - Use the managed identity to apply the policy remediation.
@@ -45,7 +45,7 @@ Are you ready to embrace this challenge?
    - SigninLogs matching an IP entity belonging to threat indicators of compromise.
 
     >**Notes**: 
-    >  - Use the rule templates 
+    >  - Use the rule templates.
     >  - Use NRT rules whenever it is possible.
     >  - The scheduled rules frequency should be reduced to 5 minutes and lookup data to 1 day.
     >  - To detect VM using 16vcpu, you will need to modify the detection query.
@@ -77,5 +77,3 @@ Are you ready to embrace this challenge?
 : https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
 - Tutorial, Detect threats by using analytics rules in Microsoft Sentinel: https://learn.microsoft.com/en-us/azure/sentinel/tutorial-log4j-detection
 - Tutorial, Respond to threats by using playbooks with automation rules: https://learn.microsoft.com/en-us/azure/sentinel/tutorial-respond-threats-playbook?tabs=LAC%2Cincidents
-
-
