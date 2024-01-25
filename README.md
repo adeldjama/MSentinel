@@ -25,7 +25,7 @@ Are you ready to embrace this challenge?
 
 ## Hacking Steps
 
-1. Connect to Azure using **cohacker** user account. Your coach will provide you the password's account.
+1. Connect to Azure using **cohacker** user account. Your coach will provide you with the password account.
 
 2. Deploy Microsoft Sentinel with a new log analytics workspace.
 
