@@ -1,4 +1,4 @@
-# Microsoft Sentiel Unveiled
+# Microsoft Sentinel Unveiled
 
 ## Goal
 
@@ -55,8 +55,7 @@ Are you ready to embrace this challenge?
    
    - On a browser private window, sign in with **j.robert** user account (the password will be provided by your coach) to access to:
     
-      - Azure portal: **https://portal.azure.com**
-      
+      - Azure portal: **https://portal.azure.com**      
       - Outlook: **https://outlook.office.com**
       - Microsoft 365: **https://microsoft365.com**
    
@@ -73,7 +72,6 @@ Are you ready to embrace this challenge?
 
 ## Resources
 
-- Quickstart, Onboard Microsoft Sentinel
-: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
+- Quickstart, Onboard Microsoft Sentinel: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
 - Tutorial, Detect threats by using analytics rules in Microsoft Sentinel: https://learn.microsoft.com/en-us/azure/sentinel/tutorial-log4j-detection
 - Tutorial, Respond to threats by using playbooks with automation rules: https://learn.microsoft.com/en-us/azure/sentinel/tutorial-respond-threats-playbook?tabs=LAC%2Cincidents
