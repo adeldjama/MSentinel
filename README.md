@@ -33,7 +33,7 @@ Are you ready to embrace this challenge?
    - Azure Activity logs.
    - Microsoft Entra ID sign-in logs.
    - Windows Security Event for vm-win11.
-   - Micrsooft Defender Threat Intelligence.
+   - Microsoft Defender Threat Intelligence.
    >**Notes**: 
    >  - You will need to install solutions first from content hub.
    >  - Use the managed identity to apply the policy remediation.
